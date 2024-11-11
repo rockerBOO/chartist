@@ -90,7 +90,7 @@
     "@rollup/plugin-node-resolve": "^13.2.0",
     "@size-limit/preset-big-lib": "^7.0.8",
     "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-controls": "^6.4.22",
+    "@storybook/addon-controls": "^8.4.2",
     "@storybook/addon-docs": "^6.4.22",
     "@storybook/addon-storyshots": "^6.4.22",
     "@storybook/addon-storyshots-puppeteer": "^6.4.22",
