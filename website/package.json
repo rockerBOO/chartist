@@ -30,7 +30,7 @@
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.14",
+    "@docusaurus/module-type-aliases": "3.6.1",
     "@tsconfig/docusaurus": "^1.0.4",
     "@types/react": "^17.0.36",
     "docusaurus-plugin-typedoc": "^0.17.4",
