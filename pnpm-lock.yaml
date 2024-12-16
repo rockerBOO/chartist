@@ -184,17 +184,17 @@ importers:
   website:
     dependencies:
       '@algolia/client-search':
-        specifier: ^4.11.0
-        version: 4.14.2
+        specifier: ^5.17.1
+        version: 5.17.1
       '@docusaurus/core':
         specifier: 2.0.0-beta.14
         version: 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
       '@docusaurus/preset-classic':
         specifier: 2.0.0-beta.14
-        version: 2.0.0-beta.14(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
+        version: 2.0.0-beta.14(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
       '@docusaurus/theme-search-algolia':
         specifier: ^2.0.0-beta.9
-        version: 2.1.0(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
+        version: 2.1.0(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
       '@mdx-js/react':
         specifier: ^1.6.21
         version: 1.6.22(react@17.0.2)
@@ -256,14 +256,14 @@ packages:
       '@algolia/autocomplete-shared': 1.7.1
     dev: false
 
-  /@algolia/autocomplete-preset-algolia@1.7.1(@algolia/client-search@4.14.2)(algoliasearch@4.14.2):
+  /@algolia/autocomplete-preset-algolia@1.7.1(@algolia/client-search@5.17.1)(algoliasearch@4.14.2):
     resolution: {integrity: sha512-pJwmIxeJCymU1M6cGujnaIYcY3QPOVYZOXhFkWVM7IxKzy272BwCvMFMyc5NpG/QmiObBxjo7myd060OeTNJXg==}
     peerDependencies:
       '@algolia/client-search': ^4.9.1
       algoliasearch: ^4.9.1
     dependencies:
       '@algolia/autocomplete-shared': 1.7.1
-      '@algolia/client-search': 4.14.2
+      '@algolia/client-search': 5.17.1
       algoliasearch: 4.14.2
     dev: false
 
@@ -311,6 +311,11 @@ packages:
       '@algolia/transporter': 4.14.2
     dev: false
 
+  /@algolia/client-common@5.17.1:
+    resolution: {integrity: sha512-5rb5+yPIie6912riAypTSyzbE23a7UM1UpESvD8GEPI4CcWQvA9DBlkRNx9qbq/nJ5pvv8VjZjUxJj7rFkzEAA==}
+    engines: {node: '>= 14.0.0'}
+    dev: false
+
   /@algolia/client-personalization@4.14.2:
     resolution: {integrity: sha512-ACCoLi0cL8CBZ1W/2juehSltrw2iqsQBnfiu/Rbl9W2yE6o2ZUb97+sqN/jBqYNQBS+o0ekTMKNkQjHHAcEXNw==}
     dependencies:
@@ -325,6 +330,16 @@ packages:
       '@algolia/client-common': 4.14.2
       '@algolia/requester-common': 4.14.2
       '@algolia/transporter': 4.14.2
+    dev: false
+
+  /@algolia/client-search@5.17.1:
+    resolution: {integrity: sha512-bd5JBUOP71kPsxwDcvOxqtqXXVo/706NFifZ/O5Rx5GB8ZNVAhg4l7aGoT6jBvEfgmrp2fqPbkdIZ6JnuOpGcw==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      '@algolia/client-common': 5.17.1
+      '@algolia/requester-browser-xhr': 5.17.1
+      '@algolia/requester-fetch': 5.17.1
+      '@algolia/requester-node-http': 5.17.1
     dev: false
 
   /@algolia/events@4.0.1:
@@ -347,14 +362,35 @@ packages:
       '@algolia/requester-common': 4.14.2
     dev: false
 
+  /@algolia/requester-browser-xhr@5.17.1:
+    resolution: {integrity: sha512-XpKgBfyczVesKgr7DOShNyPPu5kqlboimRRPjdqAw5grSyHhCmb8yoTIKy0TCqBABZeXRPMYT13SMruUVRXvHA==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      '@algolia/client-common': 5.17.1
+    dev: false
+
   /@algolia/requester-common@4.14.2:
     resolution: {integrity: sha512-73YQsBOKa5fvVV3My7iZHu1sUqmjjfs9TteFWwPwDmnad7T0VTCopttcsM3OjLxZFtBnX61Xxl2T2gmG2O4ehg==}
+    dev: false
+
+  /@algolia/requester-fetch@5.17.1:
+    resolution: {integrity: sha512-EhUomH+DZP5vb6DnEjT0GvXaXBSwzZnuU6hPGNU1EYKRXDouRjII/bIWpVjt7ycMgL2D2oQruqDh6rAWUhQwRw==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      '@algolia/client-common': 5.17.1
     dev: false
 
   /@algolia/requester-node-http@4.14.2:
     resolution: {integrity: sha512-oDbb02kd1o5GTEld4pETlPZLY0e+gOSWjWMJHWTgDXbv9rm/o2cF7japO6Vj1ENnrqWvLBmW1OzV9g6FUFhFXg==}
     dependencies:
       '@algolia/requester-common': 4.14.2
+    dev: false
+
+  /@algolia/requester-node-http@5.17.1:
+    resolution: {integrity: sha512-PSnENJtl4/wBWXlGyOODbLYm6lSiFqrtww7UpQRCJdsHXlJKF8XAP6AME8NxvbE0Qo/RJUxK0mvyEh9sQcx6bg==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      '@algolia/client-common': 5.17.1
     dev: false
 
   /@algolia/transporter@4.14.2:
@@ -3363,7 +3399,7 @@ packages:
     resolution: {integrity: sha512-gaP6TxxwQC+K8D6TRx5WULUWKrcbzECOPA2KCVMuI+6C7dNiGUk5yXXzVhc5sld79XKYLnO9DRTI4mjXDYkh+g==}
     dev: false
 
-  /@docsearch/react@3.2.1(@algolia/client-search@4.14.2)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2):
+  /@docsearch/react@3.2.1(@algolia/client-search@5.17.1)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2):
     resolution: {integrity: sha512-EzTQ/y82s14IQC5XVestiK/kFFMe2aagoYFuTAIfIb/e+4FU7kSMKonRtLwsCiLQHmjvNQq+HO+33giJ5YVtaQ==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
@@ -3378,7 +3414,7 @@ packages:
         optional: true
     dependencies:
       '@algolia/autocomplete-core': 1.7.1
-      '@algolia/autocomplete-preset-algolia': 1.7.1(@algolia/client-search@4.14.2)(algoliasearch@4.14.2)
+      '@algolia/autocomplete-preset-algolia': 1.7.1(@algolia/client-search@5.17.1)(algoliasearch@4.14.2)
       '@docsearch/css': 3.2.1
       '@types/react': 17.0.49
       algoliasearch: 4.14.2
@@ -3714,7 +3750,7 @@ packages:
       '@docusaurus/react-loadable': 5.5.2(react@17.0.2)
       '@docusaurus/types': 2.1.0(@swc/core@1.2.165)(react-dom@17.0.2)(react@17.0.2)
       '@types/history': 4.7.11
-      '@types/react': 18.0.5
+      '@types/react': 17.0.49
       '@types/react-router-config': 5.0.6
       '@types/react-router-dom': 5.3.3
       react: 17.0.2
@@ -4085,7 +4121,7 @@ packages:
       - webpack-cli
     dev: false
 
-  /@docusaurus/preset-classic@2.0.0-beta.14(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0):
+  /@docusaurus/preset-classic@2.0.0-beta.14(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0):
     resolution: {integrity: sha512-43rHA6wM4FcbHLPiBpqY4VSUjUXOWvW/N4q0wvf1LMoPH25lUzIaldpjD3Unzq5+UCYCFES24ktl58QOh7PB2g==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -4101,7 +4137,7 @@ packages:
       '@docusaurus/plugin-google-gtag': 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
       '@docusaurus/plugin-sitemap': 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
       '@docusaurus/theme-classic': 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
-      '@docusaurus/theme-search-algolia': 2.0.0-beta.14(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
+      '@docusaurus/theme-search-algolia': 2.0.0-beta.14(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0)
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
     transitivePeerDependencies:
@@ -4230,7 +4266,7 @@ packages:
       '@docusaurus/plugin-content-pages': 2.1.0(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
       '@docusaurus/utils': 2.1.0(@docusaurus/types@2.1.0)(@swc/core@1.2.165)
       '@types/history': 4.7.11
-      '@types/react': 18.0.5
+      '@types/react': 17.0.49
       '@types/react-router-config': 5.0.6
       clsx: 1.2.1
       parse-numeric-range: 1.3.0
@@ -4256,14 +4292,14 @@ packages:
       - webpack-cli
     dev: false
 
-  /@docusaurus/theme-search-algolia@2.0.0-beta.14(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0):
+  /@docusaurus/theme-search-algolia@2.0.0-beta.14(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)(webpack@5.73.0):
     resolution: {integrity: sha512-kTQl8vKXn8FAVVkCeN4XvU8PGWZTHToc+35F9GL06b4rv33zL9HaFIRX3nPM1NHC7I8qh+6gGeV0DRKGjO+j2g==}
     engines: {node: '>=14'}
     peerDependencies:
       react: ^16.8.4 || ^17.0.0
       react-dom: ^16.8.4 || ^17.0.0
     dependencies:
-      '@docsearch/react': 3.2.1(@algolia/client-search@4.14.2)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2)
+      '@docsearch/react': 3.2.1(@algolia/client-search@5.17.1)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2)
       '@docusaurus/core': 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
       '@docusaurus/logger': 2.0.0-beta.14
       '@docusaurus/theme-common': 2.0.0-beta.14(@swc/core@1.2.165)(eslint@8.15.0)(prism-react-renderer@1.3.5)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
@@ -4298,14 +4334,14 @@ packages:
       - webpack-cli
     dev: false
 
-  /@docusaurus/theme-search-algolia@2.1.0(@algolia/client-search@4.14.2)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4):
+  /@docusaurus/theme-search-algolia@2.1.0(@algolia/client-search@5.17.1)(@swc/core@1.2.165)(@types/react@17.0.49)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4):
     resolution: {integrity: sha512-rNBvi35VvENhucslEeVPOtbAzBdZY/9j55gdsweGV5bYoAXy4mHB6zTGjealcB4pJ6lJY4a5g75fXXMOlUqPfg==}
     engines: {node: '>=16.14'}
     peerDependencies:
       react: ^16.8.4 || ^17.0.0
       react-dom: ^16.8.4 || ^17.0.0
     dependencies:
-      '@docsearch/react': 3.2.1(@algolia/client-search@4.14.2)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2)
+      '@docsearch/react': 3.2.1(@algolia/client-search@5.17.1)(@types/react@17.0.49)(react-dom@17.0.2)(react@17.0.2)
       '@docusaurus/core': 2.1.0(@docusaurus/types@2.1.0)(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
       '@docusaurus/logger': 2.1.0
       '@docusaurus/plugin-content-docs': 2.1.0(@swc/core@1.2.165)(eslint@8.15.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.6.4)
@@ -4381,7 +4417,7 @@ packages:
       react-dom: ^16.8.4 || ^17.0.0
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.5
+      '@types/react': 17.0.49
       commander: 5.1.0
       joi: 17.6.0
       react: 17.0.2
@@ -7888,12 +7924,12 @@ packages:
     resolution: {integrity: sha512-YYknwy0D0iOwKQgz9v8nOzt2J6l4gouBmDnWqUUznltOTaon+r8US8ky8HvN0tXvc38U9m6z/t2RsVsnd1zM0g==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.5
+      '@types/react': 17.0.49
 
   /@types/react-syntax-highlighter@11.0.5:
     resolution: {integrity: sha512-VIOi9i2Oj5XsmWWoB72p3KlZoEbdRAcechJa8Ztebw7bDl2YmR+odxIqhtJGp1q2EozHs02US+gzxJ9nuf56qg==}
     dependencies:
-      '@types/react': 18.0.5
+      '@types/react': 17.0.49
     dev: true
 
   /@types/react@17.0.49:
